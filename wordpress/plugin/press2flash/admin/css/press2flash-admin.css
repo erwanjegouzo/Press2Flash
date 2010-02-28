@@ -1,0 +1,27 @@
+#press2flash_wrap{
+}
+
+
+.p2f_validation_message{
+	position:absolute;
+	right:20px;
+	top:80px;
+	display:block;
+	width:100px;
+	color:#fff;
+	padding:20px;
+	display:none;
+}
+
+#p2f_success_message{background:green;}
+#p2f_error_message{border:1px solid red; }
+
+#p2f_options_middle{
+float:left; margin-top:150px;margin-left:15px;margin-right:15px;
+}
+
+.p2f_textarea{width:660px;}
+
+.p2f_left{float:left;}
+.p2f_right{float:right;}
+.p2f_clear{clear:both;}
