@@ -30,7 +30,7 @@ posts_serializer.numberposts = 10;
 posts_serializer.cat = "news";
 
 // proceed to the request
-wpConnect.getPosts(posts_serializer);</listing>
+wp_connection.getPosts(posts_serializer);</listing>
 	 * @author Erwan Jégouzo
 	 */
 	public class GetPostsSerializer extends Serializer implements ISerialiser
@@ -87,7 +87,7 @@ wpConnect.getPosts(posts_serializer);</listing>
 		
 		
 		/** Amount of post that should be displayed */
-		public var numberposts				:int = WPConfig.getPostsAmountPerPage();
+		public var numberposts				:int = WPConfig.postsAmountPerPage;
 			
 		/** Output the customfields for the post or not */
 		public var output_customfields		:Boolean = false;

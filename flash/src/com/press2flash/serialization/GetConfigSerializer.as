@@ -32,7 +32,7 @@ configSerialiser.output_categories = true;
 configSerialiser.output_pages = true;
 
 // proceed to the request
-wpConnect.getConfig(configSerialiser);</listing>
+wp_connection.getConfig(configSerialiser);</listing>
 	 * @author Erwan Jégouzo
 	 */
 	public class GetConfigSerializer extends Serializer implements ISerialiser

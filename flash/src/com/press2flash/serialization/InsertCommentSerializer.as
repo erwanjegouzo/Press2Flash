@@ -30,7 +30,7 @@ com_serializer.comment_author = "Erwan";
 com_serializer.comment_content = "this is my great comment!";
 
 // proceed to the request
-wpConnect.insertComment(com_serializer);</listing>
+wp_connection.insertComment(com_serializer);</listing>
 	 * @author Erwan Jégouzo
 	 */
 	public class InsertCommentSerializer extends Serializer implements ISerialiser

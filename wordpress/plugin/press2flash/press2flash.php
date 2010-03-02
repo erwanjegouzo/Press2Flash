@@ -107,8 +107,8 @@ if (!class_exists("Press2Flash")) {
 		</script>
 
 		
-			<div class="p2f_validation_message" id="p2f_success_message"><p>Option saved</p></div>
-			<div class="p2f_validation_message" id="p2f_error_message"><p>red alert!</p></div>
+			<div class="p2f_validation_message" id="p2f_success_message"><p>Option saved!</p></div>
+			<div class="p2f_validation_message" id="p2f_error_message"><p>The option could not be saved!</p></div>
 			<form>
 			<h2>Export Wordpress configuration</h2>
 				<p>The selected options will be exported as soon as the application is called.<br />They contain the Wordpress basics configuration for the website</p>

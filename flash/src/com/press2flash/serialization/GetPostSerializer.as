@@ -30,7 +30,7 @@ post_serializer.output_customfields = true;
 post_serializer.post_type = "post";
 
 // proceed to the request
-wpConnect.getPost(post_serializer);</listing>
+wp_connection.getPost(post_serializer);</listing>
 	 * @author Erwan Jégouzo
 	 */
 	public class GetPostSerializer extends Serializer implements ISerialiser

@@ -14,10 +14,10 @@
 }
 
 #p2f_success_message{background:green;}
-#p2f_error_message{border:1px solid red; }
+#p2f_error_message{background:red; }
 
 #p2f_options_middle{
-float:left; margin-top:150px;margin-left:15px;margin-right:15px;
+	float:left; margin-top:150px;margin-left:15px;margin-right:15px;
 }
 
 .p2f_textarea{width:660px;}

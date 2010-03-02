@@ -31,7 +31,7 @@ rate_serializer.post_id = 10;
 rate_serializer.rating = 5;
 
 // proceed to the request
-wpConnect.ratePost(rate_serializer);</listing>
+wp_connection.ratePost(rate_serializer);</listing>
 	 * @author Erwan Jégouzo
 	 */
 	public class RatePostSerializer extends Serializer implements ISerialiser

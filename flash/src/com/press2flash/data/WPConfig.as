@@ -88,16 +88,16 @@
 	
 		
 		/** Return the Blog Name */
-		public static function getBlogName():String { 			return WP_CONFIG.blogname.@value; }
+		public static function get blogName():String { 			return WP_CONFIG.blogname.@value; }
 		/** Return the Blog Description */
-		public static function getBlogDescription():String { 	return WP_CONFIG.blogdescription.@value; }
+		public static function get blogDescription():String { 	return WP_CONFIG.blogdescription.@value; }
 		/** Return the Blog URL */
-		public static function getSiteURL():String { 			return WP_CONFIG.siteurl.@value; }
+		public static function get siteURL():String { 			return WP_CONFIG.siteurl.@value; }
 		/** Return the first page to show */
-		public static function getBlogFirstPage():String { 		return WP_CONFIG.page_on_front.@value; }
+		public static function get blogFirstPage():String { 	return WP_CONFIG.page_on_front.@value; }
 		/** Return the categories */
-		public static function getCategories():XML { 			return WP_CONFIG.categories; }
+		public static function get categories():XML { 			return WP_CONFIG.categories; }
 		/** Return the amount of posts to display on each page */ 
-		public static function getPostsAmountPerPage():int{ 			return Number(WP_CONFIG.posts_per_page.@value); }
+		public static function get postsAmountPerPage():int{ 	return Number(WP_CONFIG.posts_per_page.@value); }
 	}
 }

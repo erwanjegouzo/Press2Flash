@@ -338,11 +338,13 @@ function press2flash_getPost($xml)
 	$author_name = $dom->createElement('author_name', ucfirst($user_info->display_name));
 	$wp_content->appendChild($author_name);
 
-	#output rating
-	$rating_info = get_userdata($db_query->post_author);
-	$rating = $dom->createElement('rating', the_ratings_results($post_id));
-	$wp_content->appendChild($rating);
 	
+	#output rating
+	if (function_exists('the_ratings_results')) {
+		$rating_info = get_userdata($db_query->post_author);
+		$rating = $dom->createElement('rating', the_ratings_results($post_id));
+		$wp_content->appendChild($rating);
+	}
 	
 	// remove Tags
 	$wp_nodes = $dom->documentElement;

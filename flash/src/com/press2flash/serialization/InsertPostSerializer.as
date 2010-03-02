@@ -30,7 +30,7 @@ post_serializer.post_category = "news";
 post_serializer.post_content = "Hi, this is my new post!";
 
 // proceed to the request
-wpConnect.insertPost(post_serializer);</listing>
+wp_connection.insertPost(post_serializer);</listing>
 	 * @author Erwan Jégouzo
 	 */
 	public class InsertPostSerializer extends Serializer implements ISerialiser

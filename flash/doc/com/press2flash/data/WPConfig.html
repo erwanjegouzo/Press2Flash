@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../../print.css" type="text/css" media="print">
-<meta content="WPConfig,com.press2flash.data.WPConfig,APP_PATH,WP_CONFIG,getBlogDescription,getBlogFirstPage,getBlogName,getCategories,getCategoryById,getCategoryBySlug,getPageById,getPageBySlug,getPostsAmountPerPage,getSiteURL" name="keywords">
+<meta content="WPConfig,com.press2flash.data.WPConfig,APP_PATH,WP_CONFIG,blogDescription,blogFirstPage,blogName,categories,postsAmountPerPage,siteURL,getCategoryById,getCategoryBySlug,getPageById,getPageBySlug" name="keywords">
 <title>com.press2flash.data.WPConfig</title>
 </head>
 <body>
@@ -62,6 +62,30 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol">WPConfig</td>
 </tr>
 <tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#blogDescription">blogDescription</a> : String<div class="summaryTableDescription">[static][read-only] Return the Blog Description </div>
+</td><td class="summaryTableOwnerCol">WPConfig</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#blogFirstPage">blogFirstPage</a> : String<div class="summaryTableDescription">[static][read-only] Return the first page to show </div>
+</td><td class="summaryTableOwnerCol">WPConfig</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#blogName">blogName</a> : String<div class="summaryTableDescription">[static][read-only] Return the Blog Name </div>
+</td><td class="summaryTableOwnerCol">WPConfig</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#categories">categories</a> : XML<div class="summaryTableDescription">[static][read-only] Return the categories </div>
+</td><td class="summaryTableOwnerCol">WPConfig</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#postsAmountPerPage">postsAmountPerPage</a> : int<div class="summaryTableDescription">[static][read-only] Return the amount of posts to display on each page </div>
+</td><td class="summaryTableOwnerCol">WPConfig</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#siteURL">siteURL</a> : String<div class="summaryTableDescription">[static][read-only] Return the Blog URL </div>
+</td><td class="summaryTableOwnerCol">WPConfig</td>
+</tr>
+<tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#WP_CONFIG">WP_CONFIG</a> : XML<div class="summaryTableDescription">[static] Holds wordpress's configuration information </div>
 </td><td class="summaryTableOwnerCol">WPConfig</td>
 </tr>
@@ -79,34 +103,6 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#WPConfig()">WPConfig</a>(data:XML)</div>
 <div class="summaryTableDescription"></div>
-</td><td class="summaryTableOwnerCol">WPConfig</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
-<div class="summarySignature">
-<a class="signatureLink" href="#getBlogDescription()">getBlogDescription</a>():String</div>
-<div class="summaryTableDescription">[static] Return the Blog Description </div>
-</td><td class="summaryTableOwnerCol">WPConfig</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
-<div class="summarySignature">
-<a class="signatureLink" href="#getBlogFirstPage()">getBlogFirstPage</a>():String</div>
-<div class="summaryTableDescription">[static] Return the first page to show </div>
-</td><td class="summaryTableOwnerCol">WPConfig</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
-<div class="summarySignature">
-<a class="signatureLink" href="#getBlogName()">getBlogName</a>():String</div>
-<div class="summaryTableDescription">[static] Return the Blog Name </div>
-</td><td class="summaryTableOwnerCol">WPConfig</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
-<div class="summarySignature">
-<a class="signatureLink" href="#getCategories()">getCategories</a>():XML</div>
-<div class="summaryTableDescription">[static] Return the categories </div>
 </td><td class="summaryTableOwnerCol">WPConfig</td>
 </tr>
 <tr class="">
@@ -145,20 +141,6 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
    </div>
 </td><td class="summaryTableOwnerCol">WPConfig</td>
 </tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
-<div class="summarySignature">
-<a class="signatureLink" href="#getPostsAmountPerPage()">getPostsAmountPerPage</a>():int</div>
-<div class="summaryTableDescription">[static] Return the amount of posts to display on each page </div>
-</td><td class="summaryTableOwnerCol">WPConfig</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
-<div class="summarySignature">
-<a class="signatureLink" href="#getSiteURL()">getSiteURL</a>():String</div>
-<div class="summaryTableDescription">[static] Return the Blog URL </div>
-</td><td class="summaryTableOwnerCol">WPConfig</td>
-</tr>
 </table>
 </div>
 <script type="text/javascript" language="javascript">
@@ -176,6 +158,78 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static var APP_PATH:String</code><p> Holds the path to the flash file </p></div>
+<a name="blogDescription"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">blogDescription</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>blogDescription:String</code>&nbsp;&nbsp;[read-only]<p> Return the Blog Description </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get blogDescription():String</code>
+<br>
+</div>
+<a name="blogFirstPage"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">blogFirstPage</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>blogFirstPage:String</code>&nbsp;&nbsp;[read-only]<p> Return the first page to show </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get blogFirstPage():String</code>
+<br>
+</div>
+<a name="blogName"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">blogName</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>blogName:String</code>&nbsp;&nbsp;[read-only]<p> Return the Blog Name </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get blogName():String</code>
+<br>
+</div>
+<a name="categories"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">categories</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>categories:XML</code>&nbsp;&nbsp;[read-only]<p> Return the categories </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get categories():XML</code>
+<br>
+</div>
+<a name="postsAmountPerPage"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">postsAmountPerPage</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>postsAmountPerPage:int</code>&nbsp;&nbsp;[read-only]<p> Return the amount of posts to display on each page </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get postsAmountPerPage():int</code>
+<br>
+</div>
+<a name="siteURL"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">siteURL</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>siteURL:String</code>&nbsp;&nbsp;[read-only]<p> Return the Blog URL </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get siteURL():String</code>
+<br>
+</div>
 <a name="WP_CONFIG"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -202,70 +256,10 @@ showHideInherited();
 </div>
 <a name="methodDetail"></a>
 <div class="detailSectionHeader">Method detail</div>
-<a name="getBlogDescription()"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">getBlogDescription</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>public static function getBlogDescription():String</code><p> Return the Blog Description </p><p></p>
-<span class="label">Returns</span>
-<table border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td width="20"></td><td><code>String</code></td>
-</tr>
-</table>
-</div>
-<a name="getBlogFirstPage()"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">getBlogFirstPage</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>public static function getBlogFirstPage():String</code><p> Return the first page to show </p><p></p>
-<span class="label">Returns</span>
-<table border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td width="20"></td><td><code>String</code></td>
-</tr>
-</table>
-</div>
-<a name="getBlogName()"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">getBlogName</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>public static function getBlogName():String</code><p> Return the Blog Name </p><p></p>
-<span class="label">Returns</span>
-<table border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td width="20"></td><td><code>String</code></td>
-</tr>
-</table>
-</div>
-<a name="getCategories()"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">getCategories</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>public static function getCategories():XML</code><p> Return the categories </p><p></p>
-<span class="label">Returns</span>
-<table border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td width="20"></td><td><code>XML</code></td>
-</tr>
-</table>
-</div>
 <a name="getCategoryById()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">getCategoryById</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">getCategoryById</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
 </tr>
 </table>
 <div class="detailBody">
@@ -377,36 +371,6 @@ showHideInherited();
 <span class="label">Example</span>
 <br><page id="27" title="TV-Spot" slug="tv-spot"/>
       getPageBySlug("tv-spot").page.<p></p>
-</div>
-<a name="getPostsAmountPerPage()"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">getPostsAmountPerPage</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>public static function getPostsAmountPerPage():int</code><p> Return the amount of posts to display on each page </p><p></p>
-<span class="label">Returns</span>
-<table border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td width="20"></td><td><code>int</code></td>
-</tr>
-</table>
-</div>
-<a name="getSiteURL()"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">getSiteURL</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>public static function getSiteURL():String</code><p> Return the Blog URL </p><p></p>
-<span class="label">Returns</span>
-<table border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td width="20"></td><td><code>String</code></td>
-</tr>
-</table>
 </div>
 <br>
 <br>
