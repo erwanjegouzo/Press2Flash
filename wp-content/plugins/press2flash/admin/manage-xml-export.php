@@ -8,8 +8,7 @@ if($current_user->caps["administrator"] == 1){
 	$where_array = array('press2flash_option' => 'xml_export');
 	$db_query = $wpdb->update( $wpdb->prefix . 'press2flash', $data_array, $where_array );
 	
-	if($db_query == 1){echo "success";}
-	else{echo "error";}
+	echo "success";
 }
 
 ?>
