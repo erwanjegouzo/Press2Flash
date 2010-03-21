@@ -15,15 +15,19 @@
 <link rel="SHORTCUT ICON" href="<?php bloginfo('template_directory'); ?>/../favicon.ico" type="image/x-icon" />
 <script type="text/javascript">
 		
-	var params = {"allowFullScreen":"true"};
+	var params = {};
+	params.allowFullScreen = "true";
 	params.menu = "false";
 	params.bgcolor = "#8b2c55";
 	
 	var attributes = {};
-	attributes.id = "index";
-	attributes.name = "index";
+	attributes.id = "press2flash";
+	attributes.name = "press2flash";
 	
-	swfobject.embedSWF("<?php bloginfo('template_directory'); ?>/flash/main.swf", "flashContainer", "100%", "100%", "9.0.0", "<?php bloginfo('template_directory'); ?>/flash/expressInstall.swf", {}, params, attributes);
+	var flashVars = {};
+	flashVars.plugin_path = "<?php bloginfo('wpurl'); ?>/wp-content/plugins/press2flash/";
+	
+	swfobject.embedSWF("<?php bloginfo('template_directory'); ?>/flash/press2flash.swf", "flashContainer", "100%", "100%", "9.0.0", "<?php bloginfo('template_directory'); ?>/flash/expressInstall.swf", flashVars, params, attributes);
 
 </script>
 

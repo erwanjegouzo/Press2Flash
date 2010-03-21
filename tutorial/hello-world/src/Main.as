@@ -36,8 +36,9 @@
 			stage.scaleMode = StageScaleMode.NO_SCALE;
 			stage.align 	= StageAlign.TOP_LEFT;
 			
-			/** Tell WPConfig where your flash app is located. */
+			/** Tell WPConfig where the plugin is located is located. */
 			WPConfig.TEMPLATE_DIRECTORY	= Utils.extractPath(loaderInfo.loaderURL);
+			/** and also where the template (theme) is. This will be usefull to load assets */
 			WPConfig.PLUGIN_DIRECTORY	= loaderInfo.parameters.plugin_path;
 			
 			/** instanciate a new Wordpress connection.*/
