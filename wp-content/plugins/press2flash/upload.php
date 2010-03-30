@@ -24,10 +24,11 @@ if (!empty($_FILES['Filedata']) ) {
 	$bits = "";
 	while(!feof($fp)) { $bits .= fread($fp, 4096); }
 	fclose($fp);
-		
+	
+	$fname = sanitize_file_name(remove_accents($_FILES['Filedata']['name']));
 	
 	#original
-	$original = wp_upload_bits($_FILES['Filedata']['name'], NULL, $bits);
+	$original = wp_upload_bits($fname, NULL, $bits);
 	$original_output = "file=".$original["file"]."&url=".$original["url"]."&error=".$original["error"];
 	
 	$original_path = pathinfo($original["url"]);
@@ -39,6 +40,7 @@ if (!empty($_FILES['Filedata']) ) {
 	if($is_upload_thumb == "true"){
 		$thumbnail = image_resize($original["file"], get_option("thumbnail_size_w"), get_option("thumbnail_size_h"), false, get_option("thumbnail_size_w")."_".get_option("thumbnail_size_h"));
 		if($thumbnail->errors){$thumbnail_output = "thumbnail_error=true";}
+		elseif(basename($thumbnail) == ""){$thumbnail_output = "thumbnail=";}
 		else{$thumbnail_output = "thumbnail=".$upload_path."/".basename($thumbnail);}
 	}
 	
