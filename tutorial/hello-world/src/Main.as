@@ -73,7 +73,7 @@
 		private function loadAssets():void
 		{
 			/** in this simple exemple, we just need to load a stylesheet */
-			var loader:URLLoader = new URLLoader(new URLRequest(WPConfig.TEMPLATE_URL+"flash.css"));
+			var loader:URLLoader = new URLLoader(new URLRequest(WPConfig.TEMPLATE_DIRECTORY+"flash.css"));
 			loader.addEventListener(Event.COMPLETE, onAssetsLoaded);
 		}
 
