@@ -38,7 +38,53 @@ function press2flash_ratePost($xml)
 	}
 }
 	
+	
+function press2flash_getTagCloud($xml)
+{
+	global $wpdb;
+	global $dom;
+	
+	$args = array(
+		'smallest'  => (int)sanitize($xml->params->smallest), 
+		'largest'   => (int)sanitize($xml->params->largest),
+		'unit'      => (string)sanitize($xml->params->unit), 
+		'number'    => (int)sanitize($xml->params->number),  
+		'format'    => (string)sanitize($xml->params->format),
+		'separator' => (string)sanitize($xml->params->separator),
+		'orderby'   => (string)sanitize($xml->params->orderby), 
+		'order'     => (string)sanitize($xml->params->order),
+		'exclude'   => (string)sanitize($xml->params->tag_exclude), 
+		'include'   => (string)sanitize($xml->params->tag_include), 
+		'link'      => (string)sanitize($xml->params->link), 
+		'taxonomy'  => (string)sanitize($xml->params->taxonomy),
+		'echo'      => (boolean)sanitize($xml->params->echo)
+	);
 
+	$cloud = wp_tag_cloud($args);
+	print_r($cloud);
+	//print(array_to_xml($cloud, "tag_cloud"));
+}
+	
+function press2flash_getMenu($xml)
+{
+	global $wpdb;
+	global $dom;
+	
+	$args = array( 
+	'id'			 			=> (int)sanitize($xml->params->id),
+	'slug'			 			=> (string)sanitize($xml->params->slug),
+	'menu' 						=> (string)sanitize($xml->params->menu),
+	'container'			 		=> "hein",
+	'container_class'			=> "deux",
+	'container_id'			 	=> "trois",
+	'menu_class'				=> "quatre"
+	);
+
+	$menu = wp_nav_menu($args);
+	print($menu);
+	/*
+	else{createFailMessage('Post could not be insert');}*/
+}
 
 function press2flash_insertComment($xml)
 {
@@ -172,6 +218,7 @@ function press2flash_getPosts($xml)
 		'category__in' 		=> (string)sanitize($xml->params->category__in),
 		'category__not_in' 	=> (string)sanitize($xml->params->category__not_in),
 		'category__and' 	=> (string)sanitize($xml->params->category__and),
+		'tag' 				=> (string)sanitize($xml->params->tag),
 		'tag__in' 			=> (string)sanitize($xml->params->tag__in),
 		'tag__not_in' 		=> (string)sanitize($xml->params->tag__not_in),
 		'tag__and' 			=> (string)sanitize($xml->params->tag__and),
@@ -337,11 +384,6 @@ function press2flash_getPost($xml)
 	$user_info = get_userdata($db_query->post_author);
 	$author_name = $dom->createElement('author_name', ucfirst($user_info->display_name));
 	$wp_content->appendChild($author_name);
-
-	#output rating
-	$rating_info = get_userdata($db_query->post_author);
-	$rating = $dom->createElement('rating', the_ratings_results($post_id));
-	$wp_content->appendChild($rating);
 	
 	
 	// remove Tags

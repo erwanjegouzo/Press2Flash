@@ -35,6 +35,25 @@ if (!class_exists("Press2Flash")) {
 		
 		function Press2Flash() {}
 		
+		function press2flash_update_links($the_link) {
+			
+			//if(is_feed()) {
+				//$link = preg_split("/\?page_id=/", $the_link);
+				return $the_link;
+				#$p_string = str_replace("/","\\/", get_option("siteurl"));
+				#$link = preg_split("/".$p_string."/", $the_link);
+				#$link = stripslashes($link[1]);
+				#return get_option("siteurl")."/#".$link[1];
+				//return $link[0]."#/".$link[1];
+			//}
+		}
+		function press2flash_update_post_link($the_link) {
+			$link = preg_split("/\?p=/", $the_link);
+			
+			return $link[0]."#/".$link[1];
+		}
+		
+		
 		function press2flash_update_feed_permalink($the_link) {
 			if(is_feed()) {
 				$link = preg_split("/\?p=/", $the_link);
@@ -273,6 +292,22 @@ if (isset($press2flash)) {
 	register_deactivation_hook(__FILE__,  array(&$press2flash, 'uninstall'));
 	
 	add_filter('the_permalink_rss', array(&$press2flash, 'press2flash_update_feed_permalink'));
+	add_filter('page_link', array(&$press2flash, 'press2flash_update_links'));
+	add_filter('post_link', array(&$press2flash, 'press2flash_update_links'));
+	add_filter('attachment_link', array(&$press2flash, 'press2flash_update_links'));
+	add_filter('author_feed_link', array(&$press2flash, 'press2flash_update_links'));
+	add_filter('author_link', array(&$press2flash, 'press2flash_update_links')); 
+	add_filter('comment_reply_link', array(&$press2flash, 'press2flash_update_links')); 
+	add_filter('day_link', array(&$press2flash, 'press2flash_update_links')); 
+	add_filter('feed_link', array(&$press2flash, 'press2flash_update_links')); 
+	add_filter('get_comment_author_link', array(&$press2flash, 'press2flash_update_links')); 
+	add_filter('get_comment_author_url_link', array(&$press2flash, 'press2flash_update_links')); 
+	add_filter('the_permalink', array(&$press2flash, 'press2flash_update_links')); 
+	add_filter('year_link', array(&$press2flash, 'press2flash_update_links')); 
+	add_filter('tag_link', array(&$press2flash, 'press2flash_update_links'));
+
+	 
+	//add_filter('the_permalink', array(&$press2flash, 'press2flash_update_site_permalink'));
 	
 	if(is_admin()){
 		wp_enqueue_script('jquery');

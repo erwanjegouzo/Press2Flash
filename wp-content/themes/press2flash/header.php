@@ -1,4 +1,33 @@
-<?php require(TEMPLATEPATH . '/plugindeps.php'); ?>
+<?php
+
+session_start();
+if (!isset($_SESSION['showFlash'])) { // no session;
+	$_SESSION["wp_query"] = $wp_query;
+	
+	$protocol = strtolower(substr($_SERVER["SERVER_PROTOCOL"],0,5))=="https"?"https":"http";
+	$url =  $protocol.'://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+	$query_sting = explode(get_option("siteurl")."/", $url);
+	$flash_deeplink = (count($query_sting) > 0) ? $query_sting[1] : '';
+	$flash_deeplink = str_replace("?", "", $flash_deeplink);
+	$flash_deeplink = str_replace("=", "/", $flash_deeplink);
+	
+	$_SESSION['showFlash'] = $flash_deeplink;
+	?>
+    
+    <script type="text/javascript">
+		window.location.href= "<?php echo get_option("siteurl")."/#".$_SESSION['showFlash']; ?>";
+	</script>
+    
+	<?php
+}
+else{
+	$wp_query = $_SESSION["wp_query"];
+	unset($_SESSION['showFlash']);
+}
+
+require(TEMPLATEPATH . '/plugindeps.php');
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 

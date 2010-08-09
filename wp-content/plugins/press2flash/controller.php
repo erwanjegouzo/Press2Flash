@@ -65,6 +65,14 @@ function callFunction($xml){
 			press2flash_insertComment($xml);
 		break;
 		
+		case 'getTagCloud':
+			press2flash_getTagCloud($xml);
+		break;
+		
+		case 'getMenu':
+			press2flash_getMenu($xml);
+		break;
+		
 		case 'getConfig':
 			press2flash_getConfig($xml);
 		break;

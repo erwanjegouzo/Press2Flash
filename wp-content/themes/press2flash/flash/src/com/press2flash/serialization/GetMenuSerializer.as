@@ -32,51 +32,29 @@ post_serializer.post_type = "post";
 // proceed to the request
 wp_connection.getPost(post_serializer);</listing>
 	 * @author Erwan Jégouzo
+	 * 
+	 * http://codex.wordpress.org/Function_Reference/wp_nav_menu
 	 */
-	public class GetPostSerializer extends Serializer implements ISerialiser
+	public class GetMenuSerializer extends Serializer implements ISerialiser
 	{
-		
-		public static const POST_TYPE_ANY			:String = "any";
-		public static const POST_TYPE_POST			:String = "post";
-		public static const POST_TYPE_PAGE			:String = "page";
-		public static const POST_TYPE_ATTACHMENT	:String = "attachment";
-		public static const POST_TYPE_REVISION		:String = "revision";
-		public static const POST_TYPE_CUSTOM		:String = "custom";
-		
-		
 		/** ID of the post in Wordpress to retrieve the respective information */
-		public var post_id				:int = 0;
+		public var id		:int = 0;
 		
-		public var post_type			:String = POST_TYPE_ANY;
+		public var slug		:String = "";
 		
-		/** Output the comments for the post or not */
-		public var output_comments		:Boolean = false;
-		/** Output the categories for the post or not */
-		public var output_categories	:Boolean = false;
-		/** Output the customfields for the post or not */
-		public var output_customfields	:Boolean = false;
+		public var menu		:String = "";
 		
-		public var output_featured_image:Boolean = false;
 		
-		/** Specifies what kind of comments have to be displayed */
-		public var comments_param		:GetCommentsSerializer;
 		
-		public function GetPostSerializer() {}		
+		public function GetMenuSerializer() {}		
 		
 		public function serialize():String
 		{
 			var str:String = "";
 			
-			addParam("post_id", String(post_id));
-			addParam("post_type", post_type);
-			addParam("output_comments", String(output_comments));
-			addParam("output_categories", String(output_categories));
-			addParam("output_customfields", String(output_customfields));
-			addParam("output_featured_image", String(output_featured_image));
-			
-			if (comments_param != null && output_comments) {	
-				str+=comments_param.serialize();	
-			}
+			addParam("id", String(id));
+			addParam("slug", slug);
+			addParam("menu", menu);			
 			
 			return str;
 		}

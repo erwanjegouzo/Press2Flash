@@ -16,6 +16,7 @@
 	import com.press2flash.interfaces.ISerialiser;
 	/**
 	 * Retrieve the content of a list of Wordpress post
+	 * http://codex.wordpress.org/Function_Reference/query_posts
 	 * @example Basic usage:<listing version="3.0">
 // instantiate a new WPConnection
 var wp_connection:WPConnection = new WPConnection();
@@ -76,6 +77,7 @@ wp_connection.getPosts(posts_serializer);</listing>
 		public var category__in				:String = "";
 		public var category__not_in			:String = "";
 		public var category__and			:String = "";
+		public var tag						:String = "";
 		public var tag__in					:String = "";
 		public var tag__not_in				:String = "";
 		public var tag__and					:String = "";
@@ -91,6 +93,8 @@ wp_connection.getPosts(posts_serializer);</listing>
 			
 		/** Output the customfields for the post or not */
 		public var output_customfields		:Boolean = false;
+		
+		public var output_featured_image	:Boolean = false;
 		
 		public function GetPostsSerializer() {}		
 		
@@ -121,6 +125,7 @@ wp_connection.getPosts(posts_serializer);</listing>
 			addParam("category__in", category__in);
 			addParam("category__not_in", category__not_in);
 			addParam("category__and", category__and);
+			addParam("tag", tag);
 			addParam("tag__in", tag__in);
 			addParam("tag__not_in", tag__not_in);
 			addParam("tag__and", tag__and);
@@ -130,6 +135,7 @@ wp_connection.getPosts(posts_serializer);</listing>
 			addParam("caller_get_posts", caller_get_posts);
 			addParam("offset", String(offset));
 			addParam("output_customfields", String(output_customfields));
+			addParam("output_featured_image", String(output_featured_image));
 			addParam("numberposts", String(numberposts));
 			
 			return str;

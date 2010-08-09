@@ -62,6 +62,27 @@
 			_serverConnection.send(_request);
 		}
 		
+		public function getTagCloud(obj:TagCloudSerializer):void
+		{
+			_serverConnection.xmlOutput = true;
+			_request = 	<press2flash>
+							<call callFunction = "getTagCloud" { obj.serialize() } />
+							{obj.getParams()}
+						</press2flash>;
+			_serverConnection.send(_request);
+		}
+		
+		
+		public function getMenu(obj:GetMenuSerializer):void
+		{
+			_serverConnection.xmlOutput = true;
+			_request = 	<press2flash>
+							<call callFunction = "getMenu" { obj.serialize() } />
+							{obj.getParams()}
+						</press2flash>;
+			_serverConnection.send(_request);
+		}
+		
 		/**
 		 * Get the wordpress configuration
 		 * @param	obj GetConfigSerializer object holding the parameters to retrieve from WP

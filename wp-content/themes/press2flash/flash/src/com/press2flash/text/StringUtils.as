@@ -37,7 +37,10 @@
 		public static function toBoolean( p_string:String) :Boolean{
 			return (p_string == "true") ? true : false;
 		}
-
+		
+		public static function booleanToString( p_boolean:Boolean) :String{
+			return (p_boolean) ? "true" : "false";
+		}
 
 		/**
 		* Determines whether the specified string contains any instances of p_char.
