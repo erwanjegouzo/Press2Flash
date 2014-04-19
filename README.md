@@ -3,7 +3,7 @@ Press2Flash
 
 >Press2Flash is an AS3 based framework created to add Rich Media capabilities to your WordPress-powered website.  Press2Flash also provides a Wordpress plugin to enable the communication between the CMS and Flash.
 
-:exclamation: ** This project is not maintained anymore and will probably not work anymore on recent versions of wordpress**
+** This project is not maintained anymore and will probably not work anymore on recent versions of wordpress**
 
 
 This structures reflects the Wordpress organisation.
